@@ -1,16 +1,16 @@
-## 🐐 Goat Bot V2 update Azad 👋
-<h3 align="center">✨ Powered by Syndicate Goat Bot | With Nezuko Chan 🥰</h3>
+# 🐐 Goat Bot V2 update  by Azad 💥
+# Nezuko support gc - https://m.me/j/AbZvHioA_xvfjz_Q/
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EFF&center=true&vCenter=true&width=600&lines=🚀+Welcome+to+Nezuko+Bot+V2!;🤖+Update+Unofficial+Fca+By+Azad;💫+Powered+by+Nezuko+Chat+Bot;🎯+Render+Uptime+Robot+Performance+%26+Goat+Nezuko" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EFF&center=true&vCenter=true&width=600&lines=🚀+Welcome+to+Goat+Bot+V2!;🤖+Messenger+Bot+by+Azad;💫+Powered+by+Nezuko+Chat+Bot;🎯+Modular+%26+Modern+Design" alt="Typing SVG" style="box-shadow: 0 0 25px rgba(255,255,255,0.4); border-radius: 14px;" />
 </p>
 
 <p align="center">
-  <img src="https://files.catbox.moe/i9etjw.gif" width="400" alt="Nezuko GIF"/>
+  <img src="https://files.catbox.moe/i9etjw.gif" width="400" alt="Nezuko GIF" style="border-radius: 14px; box-shadow: 0 0 30px rgba(255,255,255,0.45);" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=syndicate-goat-bot-azad&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=syndicate-goat-bot-azad&color=blueviolet&style=flat-square" alt="Profile Views" style="box-shadow: 0 0 18px rgba(255,255,255,0.35); border-radius: 10px;" />
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-v19.+-green?logo=node.js" alt="Node.js Version">
+  <img src="https://img.shields.io/badge/Node.js-v22.+-green?logo=node.js" alt="Node.js Version">
   <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
   <img src="https://img.shields.io/github/stars/Azad💥-obito/GoatBot?style=social" alt="GitHub Stars">
   <img src="https://img.shields.io/badge/Messenger-Bot-blue?logo=messenger" alt="Messenger Bot">
@@ -27,31 +27,33 @@
 
 ---
 
-## 👨‍💻 Development Team
+## 🌟 Features
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/ntkhang03">
-        <img src="https://avatars.githubusercontent.com/u/81167726?v=4" width="100px;" alt="NTKhang"/>
-        <br/>
-        <sub><b>NTKhang</b></sub>
-      </a>
-      <br/>
-      <span>Original Creator</span>
-    </td>
-    <td align="center">
-      <a href="https://github.com/goatbot-ai/dhon_bot_v2.git">
-        <img src="https://files.catbox.moe/y4cfd5.jpg" width="100px;" alt="Azad"/>
-        <br/>
-        <sub><b>Azad💥</b></sub>
-      </a>
-      <br/>
-      <span>Remodified & Error Fix</span>
-    </td>
-  </tr>
-</table>
+> 💎 **Modular command system**  
+> 🔥 **Event handling & database sync**  
+> 🌐 **Multi-language support (English & Bengali)**  
+> 🛡️ **Admin/owner role permissions**  
+> ⏱️ **Cooldowns & error handling**  
+> 🖥️ **Customizable dashboard support**  
+> 🎯 **Fun, utility, media, and system commands**
 
+---
+
+## 🧠 Overview
+
+> 🐐 **Goat Bot V2** is a multifunctional Messenger bot designed for group chats and page inbox automation.  
+> 🚀 It is **modular, async/await ready, permission-aware, and dashboard-friendly**.  
+
+---
+
+## 📥 Installation
+
+> 1️⃣ **Clone the repository**:  
+```bash
+git clone https://github.com/syndicate-goat-bot-azad/Goat_bot_v2.git
+cd Goat_bot_v2
+
+```
 ---
 
 ## 🧠 Overview
