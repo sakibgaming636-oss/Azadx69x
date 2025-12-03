@@ -1,9 +1,8 @@
-<!-- Animated Title -->
 <h1>
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Nezuko%20Bot%20V2&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32" width="100%"/>
 </h1>
 
-# 🐐 Goat Bot V2 update  by Azad 💥
+# 🐐 Goat Bot V2 update  by Azadx69x
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
@@ -28,7 +27,7 @@
 
 <!-- Animated Subtitle th Typing Effect -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EFF&center=true&vCenter=true&width=600&lines=🚀+Welcome+to+Goat+Bot+V2!;🤖+Messenger+Bot+by+Azad;💫+Powered+by+Nezuko+Chat+Bot;🎯+Modular+%26+Modern+Design" alt="Typing SVG" style="box-shadow: 0 0 25px rgba(255,255,255,0.4); border-radius: 14px;" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EFF&center=true&vCenter=true&width=600&lines=🚀+Welcome+to+Goat+Bot+V2!;🤖+Messenger+Bot+by+Azadx69x;💫+Powered+by+Nezuko+Chat+Bot;🎯+Modular+%26+Modern+Design" alt="Typing SVG" style="box-shadow: 0 0 25px rgba(255,255,255,0.4); border-radius: 14px;" />
 </p>
 
 <!-- Animated Badges -->
@@ -36,8 +35,8 @@
   <a href="https://nodejs.org/dist/v16.20.0">
     <img src="https://img.shields.io/badge/Node.js-16.x-brightgreen.svg?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js Support">
   </a>
-  <img src="https://img.shields.io/github/repo-size/syndicate-goat-bot-azad/Goat_bot_v2.svg?style=for-the-badge&label=Size&color=blue&logo=github" alt="Repo Size">
-  <img src="https://img.shields.io/badge/dynamic/json?color=orange&label=Version&prefix=v&query=%24.version&url=https://github.com/syndicate-goat-bot-azad/Goat_bot_v2/raw/main/package.json&style=for-the-badge&logo=semver" alt="Version">
+  <img src="https://img.shields.io/github/repo-size/https://github.com/nezuko-bot-v2/Azadx69x-Bot.git.svg?style=for-the-badge&label=Size&color=blue&logo=github" alt="Repo Size">
+  <img src="https://img.shields.io/badge/dynamic/json?color=orange&label=Version&prefix=v&query=%24.version&url=https://github.com/nezuko-bot-v2/Azadx69x-Bot.git/raw/main/package.json&style=for-the-badge&logo=semver" alt="Version">
   <img src="https://visitor-badge.laobi.icu/badge?style=for-the-badge&page_id=syndicate-goat-bot-azad.Goat_bot_v2&color=blueviolet" alt="Visitors">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License">
 </p>
@@ -96,9 +95,9 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <p align="center">
-  <a href="https://github.com/syndicate-goat-bot-azad/Goat_bot_v2">
+  <a href="https://github.com/nezuko-bot-v2/Azadx69x-Bot.git">
     <img align="center" 
-         src="https://github-readme-stats.vercel.app/api/pin/?username=syndicate-goat-bot-azad&repo=Goat_bot_v2&theme=github_dark" 
+         src="https://github-readme-stats.vercel.app/api/pin/?username=Azadx69x-Bot&repo=Goat_bot_v2&theme=github_dark" 
          style="margin-top: 10px;" />
   </a>
 </p>
@@ -111,14 +110,14 @@
   <br>
   <br>
   
-  <a href="https://github.com/syndicate-goat-bot-azad">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=syndicate-goat-bot-azad&theme=blue-green" style="margin-top: 10px;"/>
+  <a href="https://github.com/nezuko-bot-v2/Azadx69x-Bot.git">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Azadx69x-Bot&theme=blue-green" style="margin-top: 10px;"/>
   </a>
   <br>
   <br>
   
-  <a href="https://github.com/syndicate-goat-bot-azad">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=syndicate-goat-bot-azad&show_icons=true&theme=github_dark&line_height=27" alt="Azad's github stats" style="margin-top: 10px;"/>
+  <a href="https://github.com/nezuko-bot-v2/Azadx69x-Bot.git">
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=Azadx69x-Bot&show_icons=true&theme=github_dark&line_height=27" alt="github stats" style="margin-top: 10px;"/>
   </a>
   <br>
   <br>
@@ -234,7 +233,7 @@ The bot currently supports **2 languages**:
 
 - ❌ Unknown source code can contain **viruses, malware, and exploits**
 - ❌ May lead to **hacked accounts**
-- ✅ **Official Source Only:** [GitHub](https://github.com/syndicate-goat-bot-azad/Goat_bot_v2)
+- ✅ **Official Source Only:** [GitHub](https://github.com/nezuko-bot-v2/Azadx69x-Bot.git)
 - 🚫 Using unofficial sources **violates policy** and can get you banned
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -248,13 +247,13 @@ The bot currently supports **2 languages**:
 🖼️ owner!
 
 <p align="center">
-  <img src="https://files.catbox.moe/y4cfd5.jpg" width="500px;" alt="Azad"/>
+  <img src="https://files.catbox.moe/y4cfd5.jpg" width="500px;" alt="Azadx69x"/>
         <br/>
         <sub><b>Azad💥</b></sub>
 
         
    <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&lines=Thanks+for+Using+nezuko+fork!+😊;Don't+forget+to+⭐+the+repo;Nezuko+Update+by+Azad!+🚀;Built+with+❤️+by+NTKhang+%26+Azad" alt="Thanks" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&lines=Thanks+for+Using+nezuko+fork!+😊;Don't+forget+to+⭐+the+repo;Nezuko+Update+by+Azadx69x!+🚀;Built+with+❤️+by+NTKhang+%26+Azadx69x" alt="Thanks" />
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -272,12 +271,12 @@ The bot currently supports **2 languages**:
 <!-- Animated Footer -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
-**Made by 💋 Azad**
+**Made by NTKhang update by Azadx69x**
 
 <p>
-  <img src="https://img.shields.io/github/stars/syndicate-goat-bot-azad/Goat_bot_v2?style=social" alt="Stars">
-  <img src="https://img.shields.io/github/forks/syndicate-goat-bot-azad/Goat_bot_v2?style=social" alt="Forks">
-  <img src="https://img.shields.io/github/watchers/syndicate-goat-bot-azad/Goat_bot_v2?style=social" alt="Watchers">
+  <img src="https://img.shields.io/github/stars/Azadx69x-Bot/Goat_bot_v2?style=social" alt="Stars">
+  <img src="https://img.shields.io/github/forks/Azadx69x-Bot/Goat_bot_v2?style=social" alt="Forks">
+  <img src="https://img.shields.io/github/watchers/Azadx69x-Bot/Goat_bot_v2?style=social" alt="Watchers">
 </p>
 
 **⭐ If you like this project, give it a star! ⭐**
