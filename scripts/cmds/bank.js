@@ -5,8 +5,8 @@ const { createCanvas } = require("canvas");
 module.exports = {
     config: {
         name: "bank",
-        version: "3.3",
-        author: "Azadx69",
+        version: "0.1.3",
+        author: "Azadx69x",
         role: 0,
         shortDescription: "Banking System",
         longDescription: "Full banking with ATM card generator, multiple designs with professional layout.",
@@ -83,7 +83,7 @@ module.exports = {
       
         ctx.font = "48px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillText("Premium Digital Wallet", 40, 80);
+        ctx.fillText("Premium Bank Wallet", 40, 80);
       
         ctx.fillStyle = d.chipColor;
         ctx.fillRect(40, 160, 120, 80);
