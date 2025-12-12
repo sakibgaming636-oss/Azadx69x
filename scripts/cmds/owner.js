@@ -1,14 +1,8 @@
-// ✦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
-//    OWNER & BOT INFO COMMAND
-//    Author: Azad
-//    Version: 3.6
-// ✦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
-
 module.exports = {
   config: {
     name: "owner",
     version: 3.6,
-    author: "Azad",
+    author: "Azadx69x",
     longDescription: "Stylish hardcoded owner & bot info card with emojis",
     category: "Special",
     guide: {
