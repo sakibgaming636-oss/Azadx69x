@@ -22,7 +22,7 @@ module.exports = {
       const loadingText = "𝙁𝙚𝙩𝙘𝙝𝙞𝙣𝙜 𝙮𝙤𝙪𝙧 𝙘𝙤𝙪𝙥𝙡𝙚 𝙙𝙥...🌸";
       loadingMsg = await api.sendMessage(loadingText, event.threadID);
       
-      const response = await axios.get("https://azadx69x-x69x-top.vercel.app/api/azadx69x", {
+      const response = await axios.get("https://azadx69x-all-apis-top.vercel.app/api/azadx69x", {
         params: { query: args.join(" ") || "default" }
       });
 
