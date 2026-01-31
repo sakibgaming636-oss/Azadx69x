@@ -3,10 +3,10 @@ const fs = require("fs-extra");
 const path = require("path");
 
 const ownerInfo = {
-  name: "𝐄w'𝐫 𝐒𝐚𝐢𝐦",
-  facebook: "https://facebook.com/61565898444113",
-  telegram: "@saimx69x",
-  supportGroup: "https://m.me/j/AbZP4jRGu45w70du/"
+  name: "𝐒𝐀𝐊𝐈𝐁 𝐀𝐇𝐌𝐄𝐃",
+  facebook: "https://www.facebook.com/emnisakib",
+  telegram: "@sakib5054",
+  supportGroup: "Empty"
 };
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
     const isBotAdded = addedUsers.some(u => u.userFbId === botID);
     if (!isBotAdded) return;
 
-    const nickNameBot = global.GoatBot.config.nickNameBot || "Sakura Bot";
+    const nickNameBot = global.GoatBot.config.nickNameBot || "𝖃𝖞𝖕𝖍𝖊𝖗 𝕰𝖝𝖎𝖘𝖙 顾";
     const prefix = global.utils.getPrefix(threadID);
     const BOT_UID = botID; 
 
