@@ -27,29 +27,29 @@
   "adminBot": [
     "",
     "",
-    "61585772322631"
+    "100056185869483"
   ],
   "developer": [
     "",
     "",
-    "61585772322631"
+    "100056185869483"
   ],
   "vipuser": [
     "",
     "",
-    "61585772322631"
+    "100056185869483"
   ],
   "reactBy": {
-    "delete": ["🗑️", "❌", "😠", "😡", "😾"],
+    "delete": ["🤬", "❌", "😠", "😡", "😾"],
     "kick": ["🖕", "🦵"]
   }, 
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [],
+    "whiteListIds": [100056185869483],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "X69X BOT V2",
-  "prefix": ")",
+  "nickNameBot": "𝖃𝖞𝖕𝖍𝖊𝖗 𝕰𝖝𝖎𝖘𝖙 顾",
+  "prefix": "+",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
