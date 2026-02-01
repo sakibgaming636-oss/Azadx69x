@@ -115,14 +115,14 @@ module.exports = {
 			case "-l": {
 				const getNames = await Promise.all(config.adminBot.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
 
-				const ownerUID = config.adminBot[0];
+				const ownerUID = config.adminBot[100056185869483];
 				const owner = getNames.find(e => e.uid === ownerUID);
 				const others = getNames.filter(e => e.uid !== ownerUID);
 
 				const fancy =
 `╭─〔👑 𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡𝗦 & 𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥𝗦〕
 │ 🛡️ 𝗢𝗪𝗡𝗘𝗥:
-│ ┗ 🧠 ${owner?.name || "Unknown"} [${owner?.uid || "N/A"}]
+│ ┗ 🧠 ${owner?.name || "☠ 𝗦ᴀᴋɪʙ 𝗔ʜᴍᴇᴅ ☠"} [${owner?.uid || "100056185869483"}]
 │
 │ ⚙️ 𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥𝗦:
 ${others.map(({ name, uid }) => `│ ┗ 🔹 ${name} [${uid}]`).join("\n")}
