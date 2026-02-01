@@ -2,165 +2,138 @@ const { config } = global.GoatBot;
 const { writeFileSync } = require("fs-extra");
 
 module.exports = {
-    config: {
-        name: "admin",
-        aliases: ["ad"],
-        version: "1.1",
-        author: "Azadx69x",
-        countDown: 5,
-        role: 0,
-        shortDescription: {
-            en: "𝗔𝗱𝗱, 𝗿𝗲𝗺𝗼𝘃𝗲 𝗼𝗿 𝘃𝗶𝗲𝘄 𝘁𝗵𝗲 𝗮𝗱𝗺𝗶𝗻 𝗹𝗶𝘀𝘁"
-        },
-        longDescription: {
-            en: "𝗠𝗮𝗻𝗮𝗴𝗲 𝗯𝗼𝘁 𝗮𝗱𝗺𝗶𝗻𝘀 — 𝗮𝗱𝗱/𝗿𝗲𝗺𝗼𝘃𝗲/𝘃𝗶𝗲𝘄"
-        },
-        category: "admin",
-        guide: {
-            en:
-`🕵 𝗨𝘀𝗮𝗴𝗲:
-{pn} 𝗹𝗶𝘀𝘁
-{pn} 𝗮𝗱𝗱 <uid|tag|reply>
-{pn} 𝗿𝗲𝗺𝗼𝘃𝗲 <uid|tag|reply>`
-        }
-    },
+	config: {
+		name: "admin",
+		version: "2.0",
+		author: "eden",
+		countDown: 5,
+		role: 2,
+		description: {
+			vi: "✨ Quản lý quyền Admin cho người dùng",
+			en: "✨ Manage bot admin roles for users"
+		},
+		category: "⚙️ System",
+		guide: {
+			vi: `🔧 𝗖𝗔́𝗖𝗛 𝗗𝗨̀𝗡𝗚:
+• {pn} [add | -a] <uid | @tag>: ➕ Thêm admin
+• {pn} [remove | -r] <uid | @tag>: ➖ Xóa admin
+• {pn} [list | -l]: 📃 Danh sách admin`,
+			en: `🔧 𝗨𝗦𝗔𝗚𝗘:
+• {pn} [add | -a] <uid | @tag>: ➕ Add admin
+• {pn} [remove | -r] <uid | @tag>: ➖ Remove admin
+• {pn} [list | -l]: 📃 List admins`
+		}
+	},
 
-    langs: {
-        en: {
-            listAdmin:
-`╔════⛨ 𝐀𝐃𝐌𝐈𝐍 𝐋𝐈𝐒𝐓 ⛨════╗
-     ✪ 𝙾𝚆𝙽𝙴𝚁: 𝙰𝚣𝚊𝚍 𝚇69𝚇
-╠═══════════════════╣
-     📋 𝙰𝚍𝚖𝚒𝚗 𝙻𝚒𝚜𝚝:
-%1
-╚═══════════════════╝`,
+	langs: {
+		en: {
+			added: "✅ | Successfully added admin role to %1 user(s):\n%2",
+			alreadyAdmin: "\n⚠️ | %1 user(s) already had admin role:\n%2",
+			missingIdAdd: "⚠️ | Please tag or enter the UID of user(s) to add as admin.",
+			removed: "✅ | Removed admin role from %1 user(s):\n%2",
+			notAdmin: "⚠️ | %1 user(s) are not admins:\n%2",
+			missingIdRemove: "⚠️ | Please tag or enter the UID of user(s) to remove from admin.",
+			listAdmin: "👑 𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡𝗦\n\n%2\n\n📌 𝗧𝗼𝘁𝗮𝗹: %1"
+		}
+	},
 
-            noAdmin: "⚠️ | 𝙽𝚘 𝙰𝚍𝚖𝚒𝚗𝚜 𝙵𝚘𝚞𝚗𝚍!",
+	onStart: async function ({ message, args, usersData, event, getLang }) {
+		switch (args[0]) {
+			case "add":
+			case "-a": {
+				let uids = [];
 
-            added:
-`✔ 𝗡𝗲𝘄 𝗔𝗱𝗺𝗶𝗻𝘀 𝗔𝗱𝗱𝗲𝗱:
-━━━━━━━━━━━━━━━━
-%2
-━━━━━━━━━━━━━━━━`,
+				if (Object.keys(event.mentions).length > 0)
+					uids = Object.keys(event.mentions);
+				else if (event.messageReply)
+					uids.push(event.messageReply.senderID);
+				else
+					uids = args.filter(arg => !isNaN(arg));
 
-            alreadyAdmin:
-`⚠️ 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗔𝗱𝗺𝗶𝗻:
-━━━━━━━━━━━━━━━━
-%2
-━━━━━━━━━━━━━━━━`,
+				if (uids.length === 0)
+					return message.reply(getLang("missingIdAdd"));
 
-            removed:
-`✔ 𝗔𝗱𝗺𝗶𝗻 𝗣𝗿𝗶𝘃𝗶𝗹𝗲𝗴𝗲 𝗥𝗲𝗺𝗼𝘃𝗲𝗱:
-━━━━━━━━━━━━━━━━
-%2
-━━━━━━━━━━━━━━━━`,
+				const notAdminIds = [];
+				const alreadyAdmins = [];
 
-            notAdmin:
-`⚠️ 𝗡𝗼𝘁 𝗔𝗻 𝗔𝗱𝗺𝗶𝗻:
-━━━━━━━━━━━━━━━━
-%2
-━━━━━━━━━━━━━━━━`,
+				for (const uid of uids) {
+					if (config.adminBot.includes(uid))
+						alreadyAdmins.push(uid);
+					else
+						notAdminIds.push(uid);
+				}
 
-            missingIdAdd: "⚠️ | 𝗧𝗮𝗴/𝗿𝗲𝗽𝗹𝘆/𝗨𝗜𝗗 𝗻𝗲𝗲𝗱𝗲𝗱 𝘁𝗼 𝗮𝗱𝗱 𝗮𝗱𝗺𝗶𝗻.",
-            missingIdRemove: "⚠️ | 𝗧𝗮𝗴/𝗿𝗲𝗽𝗹𝘆/𝗨𝗜𝗗 𝗻𝗲𝗲𝗱𝗲𝗱 𝘁𝗼 𝗿𝗲𝗺𝗼𝘃𝗲 𝗮𝗱𝗺𝗶𝗻.",
+				config.adminBot.push(...notAdminIds);
+				writeFileSync(global.client.dirConfig, JSON.stringify(config, null, 2));
 
-            notAllowed: "⛔ | 𝗬𝗼𝘂 𝗮𝗿𝗲 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀!"
-        }
-    },
+				const getNames = await Promise.all(uids.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
 
-    onStart: async function ({ message, args, event, usersData, getLang }) {
-        const senderID = event.senderID;
-        
-        if (args[0] === "list" || args[0] === "-l") {
-            if (config.adminBot.length === 0)
-                return message.reply(getLang("noAdmin"));
+				return message.reply(
+					(notAdminIds.length > 0 ? getLang("added", notAdminIds.length, getNames.filter(p => notAdminIds.includes(p.uid)).map(p => `✨ • ${p.name} [${p.uid}]`).join("\n")) : "")
+					+ (alreadyAdmins.length > 0 ? getLang("alreadyAdmin", alreadyAdmins.length, getNames.filter(p => alreadyAdmins.includes(p.uid)).map(p => `• ${p.name} [${p.uid}]`).join("\n")) : "")
+				);
+			}
 
-            const adminList = await Promise.all(
-                config.adminBot.map(async uid => {
-                    const name = await usersData.getName(uid);
-                    return `• ${name} (${uid})`;
-                })
-            );
+			case "remove":
+			case "-r": {
+				let uids = [];
 
-            return message.reply(getLang("listAdmin", adminList.join("\n")));
-        }
-        
-        if (["add", "-a", "remove", "-r"].includes(args[0])) {
-            if (!config.adminBot.includes(senderID))
-                return message.reply(getLang("notAllowed"));
-        }
-        
-        if (args[0] === "add" || args[0] === "-a") {
-            let uids = [];
+				if (Object.keys(event.mentions).length > 0)
+					uids = Object.keys(event.mentions);
+				else if (event.messageReply)
+					uids.push(event.messageReply.senderID);
+				else
+					uids = args.filter(arg => !isNaN(arg));
 
-            if (Object.keys(event.mentions).length)
-                uids = Object.keys(event.mentions);
-            else if (event.type === "message_reply")
-                uids = [event.messageReply.senderID];
-            else
-                uids = args.filter(a => !isNaN(a));
+				if (uids.length === 0)
+					return message.reply(getLang("missingIdRemove"));
 
-            if (!uids.length)
-                return message.reply(getLang("missingIdAdd"));
+				const notAdminIds = [];
+				const willRemove = [];
 
-            const newAdmins = [];
-            const alreadyAdmins = [];
+				for (const uid of uids) {
+					if (config.adminBot.includes(uid))
+						willRemove.push(uid);
+					else
+						notAdminIds.push(uid);
+				}
 
-            for (const uid of uids) {
-                if (config.adminBot.includes(uid))
-                    alreadyAdmins.push(uid);
-                else
-                    newAdmins.push(uid);
-            }
+				for (const uid of willRemove)
+					config.adminBot.splice(config.adminBot.indexOf(uid), 1);
 
-            config.adminBot.push(...newAdmins);
-            writeFileSync(global.client.dirConfig, JSON.stringify(config, null, 2));
+				writeFileSync(global.client.dirConfig, JSON.stringify(config, null, 2));
 
-            const newNames = await Promise.all(newAdmins.map(uid => usersData.getName(uid)));
-            const oldNames = await Promise.all(alreadyAdmins.map(uid => usersData.getName(uid)));
+				const getNames = await Promise.all(uids.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
 
-            return message.reply(
-                (newNames.length ? getLang("added", newNames.length, newNames.map(n => `• ${n}`).join("\n")) : "") +
-                (alreadyAdmins.length ? "\n" + getLang("alreadyAdmin", alreadyAdmins.length, oldNames.map(n => `• ${n}`).join("\n")) : "")
-            );
-        }
-        
-        if (args[0] === "remove" || args[0] === "-r") {
-            let uids = [];
+				return message.reply(
+					(willRemove.length > 0 ? getLang("removed", willRemove.length, getNames.filter(p => willRemove.includes(p.uid)).map(p => `❌ • ${p.name} [${p.uid}]`).join("\n")) : "")
+					+ (notAdminIds.length > 0 ? getLang("notAdmin", notAdminIds.length, getNames.filter(p => notAdminIds.includes(p.uid)).map(p => `• ${p.name} [${p.uid}]`).join("\n")) : "")
+				);
+			}
 
-            if (Object.keys(event.mentions).length)
-                uids = Object.keys(event.mentions);
-            else if (event.type === "message_reply")
-                uids = [event.messageReply.senderID];
-            else
-                uids = args.filter(a => !isNaN(a));
+			case "list":
+			case "-l": {
+				const getNames = await Promise.all(config.adminBot.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
 
-            if (!uids.length)
-                return message.reply(getLang("missingIdRemove"));
+				const ownerUID = config.adminBot[0];
+				const owner = getNames.find(e => e.uid === ownerUID);
+				const others = getNames.filter(e => e.uid !== ownerUID);
 
-            const removed = [];
-            const notAdmins = [];
+				const fancy =
+`╭─〔👑 𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡𝗦 & 𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥𝗦〕
+│ 🛡️ 𝗢𝗪𝗡𝗘𝗥:
+│ ┗ 🧠 ${owner?.name || "Unknown"} [${owner?.uid || "N/A"}]
+│
+│ ⚙️ 𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥𝗦:
+${others.map(({ name, uid }) => `│ ┗ 🔹 ${name} [${uid}]`).join("\n")}
+╰─────────────⟡
+📌 𝗧𝗼𝘁𝗮𝗹 𝗔𝗱𝗺𝗶𝗻𝘀: ${getNames.length}`;
 
-            for (const uid of uids) {
-                if (config.adminBot.includes(uid)) {
-                    removed.push(uid);
-                    config.adminBot.splice(config.adminBot.indexOf(uid), 1);
-                } else {
-                    notAdmins.push(uid);
-                }
-            }
+				return message.reply(fancy);
+			}
 
-            writeFileSync(global.client.dirConfig, JSON.stringify(config, null, 2));
-
-            const removedNames = await Promise.all(removed.map(uid => usersData.getName(uid)));
-            const notNames = await Promise.all(notAdmins.map(uid => usersData.getName(uid)));
-
-            return message.reply(
-                (removed.length ? getLang("removed", removed.length, removedNames.map(n => `• ${n}`).join("\n")) : "") +
-                (notAdmins.length ? "\n" + getLang("notAdmin", notAdmins.length, notNames.map(n => `• ${n}`).join("\n")) : "")
-            );
-        }
-        
-        return message.reply("⚠️ | 𝗨𝘀𝗲: 𝗹𝗶𝘀𝘁 / 𝗮𝗱𝗱 / 𝗿𝗲𝗺𝗼𝘃𝗲");
-    }
+			default:
+				return message.SyntaxError();
+		}
+	}
 };
