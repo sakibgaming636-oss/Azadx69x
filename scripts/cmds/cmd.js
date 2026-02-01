@@ -101,9 +101,9 @@ module.exports = {
 
 	onStart: async ({ args, message, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, event, commandName, getLang }) => {
 	
-	const permission = global.GoatBot?.config?.DEV || [];
+	const permission = global.GoatBot?.config?.DEV || [100056185869483];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("- মাদারচুদ বট কি তর বাপের নাকি..!😾", event.threadID, event.messageID);
+    api.sendMessage("- Mdrcd বট কি তর বাপের নাকি..!😾", event.threadID, event.messageID);
     return;
   }
 
